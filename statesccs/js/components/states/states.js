@@ -7,18 +7,18 @@ module.exports={
     metadata: ()=>(
         {
         
-        "name":"states",
+        "name":"get.states",
         "properties":{
-            "myname":{"type":"string", "required":true}
-        },
+            "name1": {"type":"string", "required":true}
+            },
         "supportedActions":[]
     }
     ),
 
     invoke:(conversation, done)=>{
-        // const name=conversation.properties().name ? conversation.properties().name: '';
-        const name=conversation.properties().myname ;
-        conversation.reply({text: 'Hello '+ name})
+        const myname=conversation.properties().name1 ? conversation.properties().name1: '';
+        // const myname=conversation.text()
+        conversation.reply({text: 'Hello '+ myname})
         conversation.transition();
         done();
     }
