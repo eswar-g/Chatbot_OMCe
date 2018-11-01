@@ -1,0 +1,37 @@
+
+{
+    "apiName":"statesCCS",
+    "apiVersion":"18.1.5",
+    "apiId":"9a591674-1c1e-4ce8-b591-d54811742267",
+    "baseUrl":"https://C05B27E3DAF0462DA6A6DD9E30D71DDE.gbcom-south-1.oraclecloud.com:443",
+    "tokenEndpoint":"https://idcs-65e9ef58bf864845ab641fb14ff39518.identity.oraclecloud.com/oauth2/v1/token",
+    "backend":{
+        "backendId":"<YOUR_BACKEND_ID>",
+        "backendName":"<YOUR_BACKEND_NAME>",
+        "backendVersion":"<YOUR_BACKEND_VERSION>",
+        "authorization":{
+            "anonymousKey":"<BACKEND_ANONYMOUS_KEY>",
+            "clientId":"<BACKEND_CLIENT_ID>",
+            "clientSecret":"<BACKEND_CLIENT_SECRET>"
+        }
+    },
+    "tools":{
+        "deployment":{
+            "tempDirectory":"c:\\tmp\\mcs-deploy"
+        },
+        "authorization":{
+            "clientId":"<OMCE_TM_APP_CLIENT_ID>",
+            "clientSecret":"<OMCE_TM_APP_CLIENT_SECRET>"
+        }
+    },
+    "container":{
+        "oracleMobileApiName":"OracleMobileAPI",
+        "port":4000
+    },
+    "tests":{
+        "getComponents":{
+            "method":"GET",
+            "resource":"/components"
+        }
+    }
+}
